@@ -4,9 +4,6 @@
     import { user } from "$lib/stores/user";
     let email: string = "";
     let password: string = "";
-    user.subscribe(value => {
-		console.log("fds",value);
-	});
 </script>
 
 <section>
@@ -14,5 +11,7 @@
   <input type="email" id="email" placehoder="email" bind:value={email} />
   <input type="passord" id="password" placehoder="password" bind:value={password}/>
   <button type="button" on:click={login(email, password)}>login</button>
-  <button type="button" on:click={logout}>logout</button>
+  {#if $user != undefined}
+    <button type="button" on:click={logout}>logout</button>
+  {/if}
 </section>
