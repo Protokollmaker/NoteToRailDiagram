@@ -7,6 +7,7 @@
 </script>
 
 <section>
+  <a href="/debug/Display/Rail">Rails</a>
   <h1>email password</h1>
   <input type="email" id="email" placehoder="email" bind:value={email} />
   <input type="passord" id="password" placehoder="password" bind:value={password}/>
