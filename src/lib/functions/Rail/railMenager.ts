@@ -10,6 +10,7 @@ class railMenager {
     }
 
     addRail(t_name: string, t_terminalcount:number) {
+        if (t_name == "") return;
         let rail = new Rail(t_name, t_terminalcount)
         rails.set([...get(rails), rail]);
         console.log(t_name, get(rails));
